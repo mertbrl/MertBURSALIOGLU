@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mert Bursalıoğlu | Portfolio</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ url_for('static', filename='Screenshot 2025-12-15 at 11.12.12.png') }}"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{{ url_for('static', filename='Screenshot 2025-12-15 at 11.12.12.png') }}"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="{{ url_for('static', filename='Screenshot 2025-12-15 at 11.12.12.png') }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{ url_for('static', filename='Screenshot 2025-12-15 at 11.12.12.png') }}"
+    />
+    <meta name="theme-color" content="#0b1021" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SzlrxWriC3O2v8p8+7Wv5I5QpZr8kG2b2e1Ff3yT7H+c1Bb9H3V9q5M1V6V7OkHu2B9rE5z7s7Yx1i6Yc6l6w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <div class="bg-gradient"></div>
+    <div class="bg-stars"></div>
+    <header class="nav-shell glass">
+      <div class="logo">MB</div>
+      <nav>
+        <a href="#hero" data-key="navHome">Ana Sayfa</a>
+        <a href="#experience" data-key="navWork">Deneyim</a>
+        <a href="#skills" data-key="navSkills">Yetenekler</a>
+        <a href="#projects" data-key="navProjects">Projeler</a>
+        <a href="#contact" data-key="navContact">İletişim</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-toggle glass">
+          <button class="active" data-lang="tr">TR</button>
+          <button data-lang="en">EN</button>
+        </div>
+        <a
+          class="social-icon linkedin"
+          href="https://www.linkedin.com/in/mert-bursalioglu"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="LinkedIn"
+        >
+          <img src="{{ url_for('static', filename='linkedin.png') }}" alt="LinkedIn" />
+        </a>
+        <a
+          class="social-icon github"
+          href="https://github.com/MertBURSALIOGLU"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="GitHub"
+        >
+          <img src="{{ url_for('static', filename='github.png') }}" alt="GitHub" />
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="section hero">
+        <div class="hero-content glass">
+          <span class="eyebrow" data-key="heroHello">Merhaba!</span>
+          <h1>
+            <span data-key="heroName">Ben Mert Bursalıoğlu</span><br />
+            <span data-key="heroRole">Yazılım Geliştiricisiyim</span>
+          </h1>
+          <p class="lede" data-key="heroIntro">
+            Matematik ve Yazılım Mühendisliği çift anadal öğrencisiyim; analitik
+            düşünmeyi modern yazılım çözümleriyle birleştiriyorum.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="pill-button primary"
+              href="{{ url_for('static', filename='Mert BURSALIOĞLU ADRESSİZ CV.docx dosyasının kopyası.docx.pdf') }}"
+              download
+              data-key="btnDownload"
+            >CV'yi Görüntüle</a
+            >
+            <a class="pill-button ghost" href="mailto:mertbursalioglu@gmail.com" data-key="btnEmail"
+              >E-posta Gönder</a
+            >
+          </div>
+          <div class="meta-row">
+            <div class="meta-chip glass">
+              <i class="fa-solid fa-location-dot"></i>
+              <span data-key="metaCity">Ankara, Türkiye</span>
+            </div>
+            <div class="meta-chip glass">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span data-key="metaSchool">Çankaya Üniversitesi</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual glass">
+          <div class="avatar">
+            <div class="avatar-ring"></div>
+            <div class="avatar-photo" aria-label="Mert Bursalıoğlu"></div>
+          </div>
+          <div class="stats">
+            <div class="stat">
+              <span class="stat-label" data-key="statYears">Yolculuk</span>
+              <span class="stat-value">2022 →</span>
+              <small data-key="statYearsHint">Matematik & Yazılım</small>
+            </div>
+            <div class="stat">
+              <span class="stat-label" data-key="statFocus">Odak</span>
+              <span class="stat-value" data-key="statFocusValue">Veri · ML · UML</span>
+              <small data-key="statFocusHint">Modelleme & SRS</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cv" class="section two-col">
+        <div class="column">
+          <div class="section-title">
+            <span class="eyebrow" data-key="eduEyebrow">Eğitim</span>
+            <h2 data-key="eduTitle">Eğitim ve Nitelikler</h2>
+          </div>
+          <div class="card-list">
+            <article class="glass card">
+              <div class="card-header">
+                <h3 data-key="edu1Title">Çankaya Üniversitesi</h3>
+                <span class="tag" data-key="edu1Time">2022 - Devam</span>
+              </div>
+              <p class="card-sub" data-key="edu1Program">
+                Fen Edebiyat Fakültesi Matematik Bölümü (Tam Burslu) — GPA: 3,74 / 4,00
+              </p>
+              <p class="card-body" data-key="edu1Desc">
+                İlgili Dersler: Matematiksel Modelleme, Sayısal Analiz, Matematiksel Yazılımlara Giriş
+              </p>
+            </article>
+            <article class="glass card">
+              <div class="card-header">
+                <h3 data-key="edu2Title">Çankaya Üniversitesi</h3>
+                <span class="tag" data-key="edu2Time">2024 - Devam</span>
+              </div>
+              <p class="card-sub" data-key="edu2Program">
+                Yazılım Mühendisliği Çift Anadal (Tam Burslu) — GPA: 3,61 / 4,00
+              </p>
+              <p class="card-body" data-key="edu2Desc">
+                İlgili Dersler: Sistem Gereksinimleri Analizi, Yazılım Tasarımı, Programlama
+              </p>
+            </article>
+            <article class="glass card">
+              <div class="card-header">
+                <h3 data-key="edu3Title">Ankara Üniversitesi</h3>
+                <span class="tag" data-key="edu3Time">2018 - 2022</span>
+              </div>
+              <p class="card-sub" data-key="edu3Program">Geliştirme Vakfı Özel Fen Lisesi — GPA: 95,43 / 100</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="column" id="experience">
+          <div class="section-title">
+            <span class="eyebrow" data-key="expEyebrow">Deneyim</span>
+            <h2 data-key="expTitle">Çalışma Deneyimi</h2>
+          </div>
+          <div class="card-list">
+            <article class="glass card">
+              <div class="card-header">
+                <h3 data-key="exp1Title">Huawei — Machine Learning Intern</h3>
+                <span class="tag" data-key="exp1Time">2024 Yaz</span>
+              </div>
+              <p class="card-body" data-key="exp1Desc">
+                Veri ön işleme, model eğitimi süreçleri, özellik mühendisliği ve model performans analizlerine katkı
+                sağladım.
+              </p>
+            </article>
+            <div class="section-title lang-heading">
+              <h2 data-key="langTitle">Dil</h2>
+            </div>
+            <article class="glass card lang-card">
+              <div class="lang-row">
+                <i class="fa-solid fa-language"></i>
+                <div>
+                  <div class="lang-label" data-key="langLevelLabel">Seviye</div>
+                  <div class="lang-sub" data-key="langLevel">İngilizce — B2 (Extended)</div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-title centered">
+          <span class="eyebrow" data-key="projEyebrow">Projeler</span>
+          <h2 data-key="projTitle">Öne Çıkan Çalışmalar</h2>
+        </div>
+        <div class="grid">
+          <article class="glass card highlight">
+            <div class="card-header">
+              <h3 data-key="proj1Title">Kanser Erken Tespiti için Veri Ön İşleme</h3>
+              <span class="tag" data-key="proj1Tag">Bitirme</span>
+            </div>
+            <p class="card-body" data-key="proj1Desc">
+              Python ile tıbbi bir veri setinde farklı veri ön işleme tekniklerinin model doğruluğuna etkilerini
+              karşılaştırdım.
+            </p>
+            <div class="chip-row">
+              <span class="chip">Python</span>
+              <span class="chip">Pandas</span>
+              <span class="chip">scikit-learn</span>
+            </div>
+          </article>
+
+          <article class="glass card highlight">
+            <div class="card-header">
+              <h3 data-key="proj2Title">Online Müzayede SRS Tasarımı</h3>
+              <span class="tag" data-key="proj2Tag">Analiz</span>
+            </div>
+            <p class="card-body" data-key="proj2Desc">
+              SRS dokümantasyonu ile gereksinimleri tanımladım ve UML diyagramlarıyla sistem davranışını modelledim.
+            </p>
+            <div class="chip-row">
+              <span class="chip">UML</span>
+              <span class="chip">SRS</span>
+              <span class="chip">LaTeX</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="section two-col">
+        <div class="column">
+          <div class="section-title">
+            <span class="eyebrow" data-key="skillsEyebrow">Yetkinlikler</span>
+            <h2 data-key="skillsTitle">Teknik Beceriler</h2>
+          </div>
+          <div class="skill-grid">
+            <div class="glass pill">
+              <strong data-key="skillLangs">Programlama Dilleri</strong>
+              <span>C, C++, Java, Python, Matlab</span>
+            </div>
+            <div class="glass pill">
+              <strong data-key="skillDev">Yazılım Geliştirme</strong>
+              <span>UML, SRS, Programlama</span>
+            </div>
+            <div class="glass pill">
+              <strong data-key="skillTools">Araçlar</strong>
+              <span>LaTeX, Microsoft 365</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="section-title">
+            <span class="eyebrow" data-key="certEyebrow">Sertifikalar</span>
+            <h2 data-key="certTitle">Öğrenme Yolculuğu</h2>
+          </div>
+          <ul class="glass list">
+            <li data-key="cert1">Python for Data Science — Udemy, 2025</li>
+            <li data-key="cert2">Java Geliştirici Kursu — Udemy, 2024</li>
+            <li data-key="cert3">Matlab Onarım — Matlab Academy, 2024</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="interests" class="section">
+        <div class="section-title centered">
+          <span class="eyebrow" data-key="intEyebrow">İlgi Alanları</span>
+          <h2 data-key="intTitle">Neleri Seviyorum?</h2>
+        </div>
+        <div class="chip-row center">
+          <span class="chip" data-key="int1">UML Diyagramları</span>
+          <span class="chip" data-key="int2">Veri Analizi</span>
+          <span class="chip" data-key="int3">Yazılım ile Problem Çözme</span>
+          <span class="chip" data-key="int4">Matematiksel Modelleme</span>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact glass">
+        <div>
+          <span class="eyebrow" data-key="contactEyebrow">İletişim</span>
+          <h2 data-key="contactTitle">Birlikte Çalışalım</h2>
+          <p data-key="contactDesc">
+            Sorularınız, iş birlikleri veya projeler için bana ulaşabilirsiniz.
+          </p>
+          <div class="contact-actions">
+            <a class="pill-button primary" href="mailto:mertbursalioglu@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <span data-key="contactEmail">mertbursalioglu@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>
+
