@@ -394,7 +394,7 @@ h3 {
 .avatar-ring {
   position: absolute;
   inset: 0;
-  border-radius: 50%;
+  border-radius: 45%;
   background: conic-gradient(from 90deg, var(--primary), var(--primary-2), var(--primary));
   filter: blur(10px);
   opacity: 0.65;
@@ -407,10 +407,10 @@ h3 {
 
 .avatar-photo {
   position: absolute;
-  inset: 14px;
-  border-radius: 50%;
+  inset: 12px;
+  border-radius: 70%;
   background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1), transparent 60%),
-    url("../Screenshot 2025-12-15 at 11.12.12.png") center 42%/118% no-repeat,
+    url("../Screenshot 2025-12-15 at 11.12.12.png") center 42%/125% no-repeat,
     linear-gradient(145deg, #141a35, #0d1129);
   border: 2px solid var(--border);
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
