@@ -214,11 +214,19 @@ nav a:hover {
 
 .lang-heading {
   margin-top: 0;
+  margin-bottom: 0 !important;
+}
+
+.section-title.lang-heading {
   margin-bottom: 0;
 }
 
 .lang-card {
   margin-top: 0;
+}
+
+.lang-heading + .lang-card {
+  margin-top: -0.6rem;
 }
 
 .icon-button:hover {
@@ -596,7 +604,7 @@ small {
 }
 
 .lang-heading h2 {
-  margin: 0.2rem 0 0.6rem;
+  margin: 0.2rem 0 0.15rem;
 }
 
 @media (max-width: 960px) {
