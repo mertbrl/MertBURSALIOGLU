@@ -90,13 +90,16 @@
           </p>
           <div class="hero-actions">
             <a
+              id="cv-download-link"
               class="pill-button primary"
-              href="{{ url_for('static', filename='Mert BURSALIOĞLU cvv.docx dosyasının kopyası.docx.pdf') }}"
+              href="{{ url_for('static', filename='MERT_BURSALIOGLU_NOREFCV.pdf') }}"
               download
+              data-cv-tr="{{ url_for('static', filename='MERT_BURSALIOGLU_NOREFCV.pdf') }}"
+              data-cv-en="{{ url_for('static', filename='cv_eng_no_ref.pdf') }}"
               data-key="btnDownload"
             >CV'yi Görüntüle</a
             >
-            <a class="pill-button ghost" href="mailto:merttbrsl@gmail.com" data-key="btnEmail"
+            <a class="pill-button ghost" href="mailto:merttbursalioglu@gmail.com" data-key="btnEmail"
               >E-posta Gönder</a
             >
           </div>
@@ -180,25 +183,30 @@
           <div class="card-list">
             <article class="glass card">
               <div class="card-header">
-                <h3 data-key="exp1Title">Huawei — Machine Learning Intern</h3>
-                <span class="tag" data-key="exp1Time">2024 Yaz</span>
+                <h3 data-key="exp1Title">BYS Grup | Kış Dönemi Stajyeri</h3>
+                <span class="tag" data-key="exp1Time">2026</span>
               </div>
-              <p class="card-body" data-key="exp1Desc">
-                Veri ön işleme, model eğitimi süreçleri, özellik mühendisliği ve model performans analizlerine katkı
-                sağladım.
-              </p>
+              <ul class="card-points">
+                <li class="card-body" data-key="exp1Desc1">
+                  FastAPI, React ve Docker kullanarak çok dilli, çoklu para birimi destekli kurumsal proje yönetim
+                  paneli projesinin uçtan uca full-stack geliştirme ve API entegrasyon süreçleri yürütüldü.
+                </li>
+              </ul>
             </article>
-            <div class="section-title lang-heading">
-              <h2 data-key="langTitle">Dil</h2>
-            </div>
-            <article class="glass card lang-card">
-              <div class="lang-row">
-                <i class="fa-solid fa-language"></i>
-                <div>
-                  <div class="lang-label" data-key="langLevelLabel">Seviye</div>
-                  <div class="lang-sub" data-key="langLevel">İngilizce — B2 (Extended)</div>
-                </div>
+            <article class="glass card">
+              <div class="card-header">
+                <h3 data-key="exp2Title">Huawei | Yaz Dönemi Stajyeri</h3>
+                <span class="tag" data-key="exp2Time">2024</span>
               </div>
+              <ul class="card-points">
+                <li class="card-body" data-key="exp2Desc1">
+                  Büyük veri setlerinde özellik mühendisliği uygulanarak XGBoost, CatBoost ve çeşitli makine
+                  öğrenmesi modelleriyle eğitim ve performans analizleri gerçekleştirildi.
+                </li>
+                <li class="card-body" data-key="exp2Desc2">
+                  Kodlama ve tasarım süreçlerinde SOLID prensiplerine uygun, sürdürülebilir bir yapı sağlandı.
+                </li>
+              </ul>
             </article>
           </div>
         </div>
@@ -251,21 +259,27 @@
           </div>
           <div class="skill-grid">
             <div class="glass pill">
-              <strong data-key="skillLangs">Programlama Dilleri</strong>
-              <span>C, C++, Java, Python, Matlab</span>
+              <strong data-key="skillProgDb">Programlama ve Veritabanı</strong>
+              <span data-key="skillProgDbValue">Python, Java, C, C++, MATLAB, PostgreSQL</span>
             </div>
             <div class="glass pill">
-              <strong data-key="skillDev">Yazılım Geliştirme</strong>
-              <span>UML, SRS, Programlama</span>
+              <strong data-key="skillTechTools">Teknolojiler ve Araçlar</strong>
+              <span data-key="skillTechToolsValue">FastAPI, React, Tailwind CSS, .NET, Docker, Git/GitHub, LaTeX</span>
             </div>
             <div class="glass pill">
-              <strong data-key="skillTools">Araçlar</strong>
-              <span>LaTeX, Microsoft 365</span>
+              <strong data-key="skillAiData">Yapay Zeka ve Veri Bilimi</strong>
+              <span data-key="skillAiDataValue">
+                Makine Öğrenmesi Algoritmaları, İstatistiksel Modelleme, Veri Ön İşleme, Özellik Mühendisliği
+              </span>
+            </div>
+            <div class="glass pill">
+              <strong data-key="skillMethodologies">Metodolojiler</strong>
+              <span data-key="skillMethodologiesValue">UML, SRS, Agile/Scrum</span>
             </div>
           </div>
         </div>
 
-        <div class="column">
+        <div class="column cert-column">
           <div class="section-title">
             <span class="eyebrow" data-key="certEyebrow">Sertifikalar</span>
             <h2 data-key="certTitle">Öğrenme Yolculuğu</h2>
@@ -275,6 +289,20 @@
             <li data-key="cert2">Java Geliştirici Kursu — Udemy, 2024</li>
             <li data-key="cert3">Matlab Onarım — Matlab Academy, 2024</li>
           </ul>
+          <div class="lang-block">
+            <div class="section-title lang-heading">
+              <h2 data-key="langTitle">Dil</h2>
+            </div>
+            <article class="glass card lang-card">
+              <div class="lang-row">
+                <i class="fa-solid fa-language"></i>
+                <div>
+                  <div class="lang-label" data-key="langLevelLabel">Seviye</div>
+                  <div class="lang-sub" data-key="langLevel">İngilizce — B2 (Extended)</div>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -299,9 +327,9 @@
             Sorularınız, iş birlikleri veya projeler için bana ulaşabilirsiniz.
           </p>
           <div class="contact-actions">
-            <a class="pill-button primary" href="mailto:merttbrsl@gmail.com">
+            <a class="pill-button primary" href="mailto:merttbursalioglu@gmail.com">
               <i class="fa-solid fa-envelope"></i>
-              <span data-key="contactEmail">merttbrsl@gmail.com</span>
+              <span data-key="contactEmail">merttbursalioglu@gmail.com</span>
             </a>
           </div>
         </div>
@@ -311,4 +339,3 @@
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   </body>
 </html>
-

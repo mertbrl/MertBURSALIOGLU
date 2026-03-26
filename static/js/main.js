@@ -36,10 +36,16 @@ const content = {
     edu3Program: "Geliştirme Vakfı Özel Fen Lisesi — GPA: 95,43 / 100",
     expEyebrow: "Deneyim",
     expTitle: "Çalışma Deneyimi",
-    exp1Title: "Huawei — Machine Learning Intern",
-    exp1Time: "2024 Yaz",
-    exp1Desc:
-      "Veri ön işleme, model eğitimi süreçleri, özellik mühendisliği ve model performans analizlerine katkı sağladım.",
+    exp1Title: "BYS Grup | Kış Dönemi Stajyeri",
+    exp1Time: "2026",
+    exp1Desc1:
+      "FastAPI, React ve Docker kullanarak çok dilli, çoklu para birimi destekli kurumsal proje yönetim paneli projesinin uçtan uca full-stack geliştirme ve API entegrasyon süreçleri yürütüldü.",
+    exp2Title: "Huawei | Yaz Dönemi Stajyeri",
+    exp2Time: "2024",
+    exp2Desc1:
+      "Büyük veri setlerinde özellik mühendisliği uygulanarak XGBoost, CatBoost ve çeşitli makine öğrenmesi modelleriyle eğitim ve performans analizleri gerçekleştirildi.",
+    exp2Desc2:
+      "Kodlama ve tasarım süreçlerinde SOLID prensiplerine uygun, sürdürülebilir bir yapı sağlandı.",
     projEyebrow: "Projeler",
     projTitle: "Öne Çıkan Çalışmalar",
     proj1Title: "Kanser Erken Tespiti için Veri Ön İşleme",
@@ -52,9 +58,15 @@ const content = {
       "SRS dokümantasyonu ile gereksinimleri tanımladım ve UML diyagramlarıyla sistem davranışını modelledim.",
     skillsEyebrow: "Yetkinlikler",
     skillsTitle: "Teknik Beceriler",
-    skillLangs: "Programlama Dilleri",
-    skillDev: "Yazılım Geliştirme",
-    skillTools: "Araçlar",
+    skillProgDb: "Programlama ve Veritabanı",
+    skillProgDbValue: "Python, Java, C, C++, MATLAB, PostgreSQL",
+    skillTechTools: "Teknolojiler ve Araçlar",
+    skillTechToolsValue: "FastAPI, React, Tailwind CSS, .NET, Docker, Git/GitHub, LaTeX",
+    skillAiData: "Yapay Zeka ve Veri Bilimi",
+    skillAiDataValue:
+      "Makine Öğrenmesi Algoritmaları, İstatistiksel Modelleme, Veri Ön İşleme, Özellik Mühendisliği",
+    skillMethodologies: "Metodolojiler",
+    skillMethodologiesValue: "UML, SRS, Agile/Scrum",
     certEyebrow: "Sertifikalar",
     certTitle: "Öğrenme Yolculuğu",
     cert1: "Python for Data Science — Udemy, 2025",
@@ -69,7 +81,7 @@ const content = {
     contactEyebrow: "İletişim",
     contactTitle: "Birlikte Çalışalım",
     contactDesc: "Sorularınız, iş birlikleri veya projeler için bana ulaşabilirsiniz.",
-    contactEmail: "merttbrsl@gmail.com",
+    contactEmail: "merttbursalioglu@gmail.com",
     langTitle: "Dil",
     langLevelLabel: "Seviye",
     langLevel: "İngilizce — B2 (Extended)",
@@ -111,10 +123,16 @@ const content = {
     edu3Program: "Geliştirme Vakfı Private Science High School — GPA: 95.43 / 100",
     expEyebrow: "Experience",
     expTitle: "Work Experience",
-    exp1Title: "Huawei — Machine Learning Intern",
-    exp1Time: "Summer 2024",
-    exp1Desc:
-      "Contributed to data preprocessing, model training pipelines, feature engineering, and performance analysis.",
+    exp1Title: "BYS Group | Winter Intern",
+    exp1Time: "2026",
+    exp1Desc1:
+      "Conducted end-to-end full-stack development and API integration processes for a multilingual, multi-currency corporate project management panel using FastAPI, React, and Docker.",
+    exp2Title: "Huawei | Summer Intern",
+    exp2Time: "2024",
+    exp2Desc1:
+      "Performed training and performance analysis using XGBoost, CatBoost, and various machine learning models by applying feature engineering on large datasets.",
+    exp2Desc2:
+      "Ensured a sustainable structure in accordance with SOLID principles during coding and design processes.",
     projEyebrow: "Projects",
     projTitle: "Featured Work",
     proj1Title: "Data Prep for Early Cancer Detection",
@@ -127,9 +145,15 @@ const content = {
       "Documented system requirements and modeled behaviors with UML diagrams for an online auction platform.",
     skillsEyebrow: "Skills",
     skillsTitle: "Technical Skills",
-    skillLangs: "Programming Languages",
-    skillDev: "Software Development",
-    skillTools: "Tools",
+    skillProgDb: "Programming & Database",
+    skillProgDbValue: "Python, Java, C, C++, MATLAB, PostgreSQL",
+    skillTechTools: "Technologies & Tools",
+    skillTechToolsValue: "FastAPI, React, Tailwind CSS, .NET, Docker, Git/GitHub, LaTeX",
+    skillAiData: "Artificial Intelligence & Data Science",
+    skillAiDataValue:
+      "Machine Learning Algorithms, Statistical Modeling, Data Preprocessing, Feature Engineering",
+    skillMethodologies: "Methodologies",
+    skillMethodologiesValue: "UML, SRS, Agile/Scrum",
     certEyebrow: "Certifications",
     certTitle: "Learning Journey",
     cert1: "Python for Data Science — Udemy, 2025",
@@ -144,7 +168,7 @@ const content = {
     contactEyebrow: "Contact",
     contactTitle: "Let's Collaborate",
     contactDesc: "Reach out for questions, collaborations, or projects.",
-    contactEmail: "merttbrsl@gmail.com",
+    contactEmail: "merttbursalioglu@gmail.com",
     langTitle: "Language",
     langLevelLabel: "Level",
     langLevel: "English — B2 (Extended)",
@@ -164,6 +188,14 @@ const setLanguage = (lang) => {
   document.querySelectorAll(".lang-toggle button").forEach((btn) => {
     btn.classList.toggle("active", btn.dataset.lang === lang);
   });
+  const cvLink = document.getElementById("cv-download-link");
+  if (cvLink) {
+    const cvPath = lang === "tr" ? cvLink.dataset.cvTr : cvLink.dataset.cvEn;
+    if (cvPath) {
+      cvLink.href = cvPath;
+      cvLink.setAttribute("download", lang === "tr" ? "MERT_BURSALIOGLU_NOREFCV.pdf" : "cv_eng_no_ref.pdf");
+    }
+  }
   localStorage.setItem("preferredLang", lang);
 };
 
@@ -196,4 +228,3 @@ document.addEventListener("DOMContentLoaded", () => {
   initLangButtons();
   initScroll();
 });
-

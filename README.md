@@ -36,11 +36,21 @@ source .venv/bin/activate  # macOS/Linux
 pip install -r requirements.txt
 ```
 
+Optional: if you prefer using npm scripts for a single command workflow:
+```bash
+npm install
+```
+
 ## 🎯 Usage
 
 Start the development server:
 ```bash
 python app.py
+```
+
+Or with npm:
+```bash
+npm run dev
 ```
 
 Open your browser and navigate to `http://localhost:5000`.

@@ -1,0 +1,10 @@
+{
+  "name": "my_website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Flask-based personal portfolio website",
+  "scripts": {
+    "dev": "./.venv/bin/python app.py",
+    "start": "./.venv/bin/gunicorn -w 4 -b 0.0.0.0:5000 app:app"
+  }
+}
